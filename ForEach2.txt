@@ -1,0 +1,12 @@
+function Factoriel(n) {
+var niz = [];
+for(i = 1; i <= n; i++) {
+    niz[i] = i;
+}
+var x = 1;
+niz.forEach(element => {
+x *= element;
+})
+console.log(x);
+            }
+Factoriel(5);
