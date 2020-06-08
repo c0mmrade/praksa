@@ -1,0 +1,9 @@
+var petlja = function(){   
+var l= 0
+    while(l<1000)
+{   
+Console.log("Necu nikada vise copy/paste status!" + "<br>");
+    l++;    
+  }    
+};   
+petlja();   
