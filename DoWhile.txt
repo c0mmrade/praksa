@@ -1,0 +1,8 @@
+var brojPuta=10000;
+var u = 0;
+do
+{
+  u += 1;
+  document.write('Necu vise nikad copy/past dnevni status!' + "<br>");      
+}
+while (u < brojPuta)
