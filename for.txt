@@ -1,0 +1,7 @@
+
+function ispisi(poruka, n) {
+for(i = 0; i<n; i++) {
+console.log(poruka);
+}
+}
+ispisi("Necu vise copy/past dnevni status", 40);
