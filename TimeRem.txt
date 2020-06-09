@@ -1,0 +1,14 @@
+var milliseconds = vreme*1000;
+function myFunction()
+{
+ 
+   var tekst = document.getElementById('tekst').value;
+  var vreme = document.getElementById('vreme').value;
+  var milliseconds = vreme*1000;
+   odstampaj(tekst, milliseconds); 
+}
+
+function odstampaj(tekst, milliseconds){
+  setTimeout( () => {document.getElementById('rezultat').innerHTML = tekst}, milliseconds);
+  setTimeout( () => {document.getElementById('rezultat').remove()}, milliseconds*2);
+}
