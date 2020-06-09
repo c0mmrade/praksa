@@ -1,0 +1,7 @@
+<label>Unesite rec:</label>
+<input type="text" id="tekst"><br>
+<label>Unesite broj:<label>
+<input type="number" id="vreme">
+<br>
+<button onclick="myFunction()">Prikazi</button><br>
+<div id="rezultat"></div>
