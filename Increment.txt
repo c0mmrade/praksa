@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<input id="number"></input>
+
+
+<script>
+var i = 0;
+	function increment() {
+		i++;
+		document.getElementById('number').value = i;
+	}
+	setInterval('increment()', 1500);
+
+
+
+
+
+</script>
+</body>
+</html>
