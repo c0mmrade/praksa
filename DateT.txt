@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-
-
 <input id="demo"></input>
-
-
-
 <script>
 var myVar = setInterval(myTimer ,1000);
 function myTimer() {
