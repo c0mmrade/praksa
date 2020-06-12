@@ -4,11 +4,11 @@
 
     Text : <input type="text" id="text_id"> <br> <br>
     Broj ponavljanja : <input type="number" id="num_id"> 
-    <button onclick="joki()">Pritisni!</button> 
+    <button onclick="prikaz()">Pritisni!</button> 
       
     <p id="GFG"></p> 
     <script> 
-        function joki() { 
+        function prikaz() { 
             var txt = document.getElementById("text_id").value; 
             document.getElementById("GFG").innerHTML = txt; 
         } 
