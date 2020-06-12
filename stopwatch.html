@@ -3,18 +3,20 @@
 <body>
 
 <h1><time>00:00:00</time></h1>
-<button id="Start"  style="background-color:Tomato;">Start</button>
-<button id="Stop"   style="background-color:SlateBlue;">Stop</button>
-<button id="Restart" style="background-color:MediumSeaGreen;">Restart</button>
+    
+<button id="start"  style="background-color:Tomato;">Start</button>
+<button id="stop"   style="background-color:SlateBlue;">Stop</button>
+<button id="restart" style="background-color:MediumSeaGreen;">Restart</button>
+    
 <div>
-<p id="nesto"></p>
+<p id="demo"></p>
 </div>
 
 <script>
 var h1 = document.getElementsByTagName('h1')[0],
-    Start = document.getElementById('Start'),
-    Stop = document.getElementById('Stop'),
-    Restart = document.getElementById('Restart'),
+    Start = document.getElementById('start'),
+    Stop = document.getElementById('stop'),
+    Restart = document.getElementById('restart'),
     seconds = 0, minutes = 0, hours = 0,
     t;
 
@@ -37,24 +39,21 @@ function add() {
 function timer() {
     t = setTimeout(add, 1000);
 }   
-   
-timer();
 
 Start.onclick = timer;
-
-
+    
 Stop.onclick = function() {
     clearTimeout(t); 
     
 
-     document.getElementById("nesto").innerHTML=h1.textContent;
+       `document.getElementById("demo").innerHTML=h1.textContent;
      
 }
 
 Restart.onclick = function() {
     h1.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;
-      document.getElementById("nesto").innerHTML=" ";
+      document.getElementById("demo").innerHTML=" ";
 
 }
 
