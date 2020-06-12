@@ -14,9 +14,9 @@
 
 <script>
 var h1 = document.getElementsByTagName('h1')[0],
-    Start = document.getElementById('start'),
-    Stop = document.getElementById('stop'),
-    Restart = document.getElementById('restart'),
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    restart = document.getElementById('restart'),
     seconds = 0, minutes = 0, hours = 0,
     t;
 
@@ -40,9 +40,9 @@ function timer() {
     t = setTimeout(add, 1000);
 }   
 
-Start.onclick = timer;
+start.onclick = timer;
     
-Stop.onclick = function() {
+stop.onclick = function() {
     clearTimeout(t); 
     
 
@@ -50,7 +50,7 @@ Stop.onclick = function() {
      
 }
 
-Restart.onclick = function() {
+restart.onclick = function() {
     h1.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;
       document.getElementById("demo").innerHTML=" ";
