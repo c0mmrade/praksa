@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1><time>00:00:00</time></h1>
+<h1 id='naslov'><time>00:00:00</time></h1>
     
 <button id="start"  style="background-color:Tomato;">Start</button>
 <button id="stop"   style="background-color:SlateBlue;">Stop</button>
@@ -13,7 +13,7 @@
 </div>
 
 <script>
-var h1 = document.getElementsByTagName('h1')[0],
+var h1 = document.getElementById('naslov'),
     start = document.getElementById('start'),
     stop = document.getElementById('stop'),
     restart = document.getElementById('restart'),
