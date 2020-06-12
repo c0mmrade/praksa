@@ -2,19 +2,11 @@
 <html>
 <body>
 
-
-<p id="demo"></p>
-
     Text : <input type="text" id="text_id"> <br> <br>
     Broj ponavljanja : <input type="number" id="num_id"> 
-      
-     
-      
     <button onclick="joki()">Pritisni!</button> 
       
     <p id="GFG"></p> 
-      
-    <!-- script to access text field -->
     <script> 
         function joki() { 
             var txt = document.getElementById("text_id").value; 
