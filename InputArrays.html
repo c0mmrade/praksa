@@ -2,11 +2,11 @@
 <html>
 <body>
 <input type="text" id="text1"></input>
-<input type="button" id="button1" value="Dodaj" onclick="dodati();"></input>
-<input type="button" id="button2" value="Prikazi" onclick="prikaz();"></input><br>
+<input type="button" id="button1" value="dodaj" onclick="dodati();"></input>
+<input type="button" id="button2" value="prikazi" onclick="prikazi();"></input><br>
 <input type="text" id="text2"></input> 
-<input type="button" id="button3" value="Proveri" onclick="provera();"></input><br>
-<div id="Result"></div> 
+<input type="button" id="button3" value="proveri" onclick="provera();"></input><br>
+<div id="rezultat"></div> 
 <script>
 var x = 0;
 var array = Array();
@@ -18,11 +18,11 @@ function dodati()
  document.getElementById("text1").value = "";
 }
 
-function prikaz()
+function prikazi()
 
 {
    
-   document.getElementById("Result").innerHTML = array;
+   document.getElementById("rezultat").innerHTML = array;
 }
 
 function provera()
@@ -32,11 +32,11 @@ var rez=document.getElementById("text2").value;
 	if(array[y]== rez)
 	{
      
-	document.getElementById("Result").innerHTML = "Broj postoji u nizu";
+	document.getElementById("rezultat").innerHTML = "Broj postoji u nizu";
 	}
 else 
 {
-	document.getElementById("Result").innerHTML ="Broj ne postoji u nizu";
+	document.getElementById("rezultat").innerHTML ="Broj ne postoji u nizu";
 	}
 
 	 }
