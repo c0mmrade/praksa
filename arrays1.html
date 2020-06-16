@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<script>
+var numbers = [1,2,3,4,5,6];
+var result = true;
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] <= 0) {
+        result = false;
+        break;
+    }
+}
+document.getElementById("demo").innerHTML=result;
+</script>
+
+</body>
+</html>
