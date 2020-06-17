@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<body>
+
+<input type="text" id="number"></input>
+<input type="button" id="button"  value ="parni/neparni brojevi" onclick="brojevi();"></input>
+
+<div id="demo"></div>
+<script>
+
+function brojevi()
+{
+	var array=document.getElementById("number").value;
+	var t=array.split(",");
+    var parni=[];
+	var neparni=[];
+
+for(var i= 0; i <=t.length; i++) {
+	
+	if(t[i] % 2 == 0) {
+		parni.push(t[i]);
+            
+         } 
+         else {
+         	neparni.push(t[i]);
+            
+         }
+           document.getElementById("demo").innerHTML=('Ovo su parni brojevi: ' + parni.join(', ') + '\n\n' + 'Ovo su neparni brojevi: ' + neparni.join(', '));
+}
+}
+</script>
+</body>
+</html>
