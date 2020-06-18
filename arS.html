@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="text"></input>
+<input type="button" id="prikazi" value="Aritmeticka sredina" onclick="arSredina()"></input>
+
+<p id="demo"></p>
+
+<script>
+
+function arSredina()
+
+{
+    var b= document.getElementById("text").value;
+	var p= b.split(",").map(Number);
+
+    var sum=0;
+   
+      for(var i= 0; i < p.length; i++)
+      {  
+        sum += p[i];
+      }
+    var konacno = sum/ p.length;
+    
+ document.getElementById("demo").innerHTML=konacno;
+}
+
+
+
+</script>
+</body>
+</html>
