@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+<body>
+	
+<input type="text" id="text"></input>
+<input type="button" id="button" value="Broj ponavljanja" onclick="broj();"></input>
+
+ <p id="demo"></p>
+
+<script>
+function broj()
+{
+	 var num = document.getElementById("text").value;
+     var t= num.split(",");
+     t.sort();
+
+    var niz= null;
+    var b = 0;
+    for (var i = 0; i < t.length; i++) {
+        if (t[i] != niz) {
+            if (b> 0) {
+                document.write(niz + ' ponavljuje se:' + b + '<br>');
+            }
+            niz = t[i];
+            b = 1;
+        } else {
+            b++;
+        }
+    }
+    if (b > 0) {
+        document.write(niz + ' pojavljuje se :' + b);
+    }
+
+}
+
+
+</script>
+</body>
+</html>
