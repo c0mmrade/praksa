@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<input type="text" id="text"></input>
+<input type="text" id="unos"></input>
 <input type="button" id="prikazi" value="Aritmeticka sredina" onclick="arSredina()"></input>
 
 <p id="demo"></p>
@@ -10,7 +10,7 @@
 <script>
 function arSredina()
 {
-        var b= document.getElementById("text").value;
+        var b= document.getElementById("unos").value;
 	var p= b.split(",").map(Number);
 
          var sum=0;
@@ -19,13 +19,11 @@ function arSredina()
       {  
         sum += p[i];
       }
-    var konacno = sum/ p.length;
+    var rezultat = sum/ p.length;
     
- document.getElementById("demo").innerHTML=konacno;
+ document.getElementById("demo").innerHTML=rezultat;
 }
-
-
-
+	
 </script>
 </body>
 </html>
