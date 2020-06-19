@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<body>
+
+	<input type="text" id="niz"></input>
+    <input type="button" id="button" value="Prikazi" onclick="prikazi()"></input>
+
+ <p id="demo"></p>
+<script>
+ function prikazi() 
+ {
+  
+  var niz = document.getElementById('niz').value;
+  var split_niz = niz.split(",");
+  var niz2 = [];
+  for(var i = 0; i< split_niz.length; i++){
+    if(split_niz[i] < i){
+      niz2.push(split_niz[i] + " " + 'manji od indexa' + i + "<br/>");
+    }else
+    {
+      niz2.push( split_niz[i] +  " " + 'veci od indexa' + i + "<br/>");
+    }
+ document.getElementById('demo').innerHTML = niz2.join("");
+}
+ }
+</script>
+</body>
