@@ -1,0 +1,46 @@
+#demo { 
+
+        font-family:Verdana;
+	font-size:20px;
+	font-weight:bold;
+        color:#00000;
+       
+
+ 
+ }
+#button {
+
+	  background-color:blue;
+          position:absolute;
+          font-size:15px;
+
+}
+body {
+	           text-align:center;  
+
+}
+.white
+{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  position:fixed;
+  border-style:dotted;
+}
+h1 {
+  text-shadow: 2px 2px 5px blue;
+ 
+     
+}
+#button1 {
+
+
+	  background-color:blue;
+          position:absolute;
+          font-size:15px;
+
+}
+
+
+
