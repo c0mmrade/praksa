@@ -26,27 +26,27 @@ function dodajZadatak() {
   /*
 		prikupljamo podatke koje je korisnik uneo
 	*/
-  var text = document.querySelector("#text").value;
-  var text1 = document.querySelector("#text1").value;
-  var text2 = document.querySelector("#text2").value;
-  var text3 = document.querySelector("#text3").value;
+  var naziv = document.querySelector("#naziv").value;
+  var serijskibroj = document.querySelector("#serijskibroj").value;
+  var kategorija = document.querySelector("#kategorija").value;
+  var korisnik = document.querySelector("#korisnik").value;
 
   var options = {};
   options.metod = "post";
   options.putanja = "novi-zadatak";
   var slanje = {
-    text: text,
-    text1: text1,
-    text2: text2,
-    text3: text3,
+    naziv: naziv,
+    serijskibroj: serijskibroj,
+    kategorija: kategorija,
+    korisnik: korisnik,
   };
   options.zadatak = JSON.stringify(slanje);
   AjaxZahtev(options, odgovorServera);
 
-  var text = (document.querySelector("#text").value = "");
-  var text1 = (document.querySelector("#text1").value = "");
-  var text2 = (document.querySelector("#text2").value = "");
-  var text3 = (document.querySelector("#text3").value = "");
+  var naziv = (document.querySelector("#naziv").value = "");
+  var serijskibroj = (document.querySelector("#serijskibroj").value = "");
+  var kategorija = (document.querySelector("#kategorija").value = "");
+  var korisnik = (document.querySelector("#korisnik").value = "");
 }
 
 function ucitajZadatke() {
@@ -56,10 +56,10 @@ function ucitajZadatke() {
   options.putanja = "button1";
 
   var slanje = {
-    text: "",
-    text1: "",
-    text2: "",
-    text3: "",
+    naziv: "",
+    serijskibroj: "",
+    kategorija: "",
+    korisnik: "",
   };
   options.text = JSON.stringify(slanje);
   AjaxZahtev(options, odgovorServera);
@@ -95,10 +95,10 @@ function brisiZadatak(sta) {
   options.putanja = "brisanje";
 
   var brisi = {
-    text: text,
-    text1: text1,
-    text2: text2,
-    text3: text3,
+    naziv: naziv,
+    serijskibroj: serijskibroj,
+    kategorija: kategorija,
+    korisnik: korisnik,
   };
   options.zadatak = JSON.stringify(brisi);
   AjaxZahtev(options, brisanje);
