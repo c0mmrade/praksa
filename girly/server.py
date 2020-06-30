@@ -1,7 +1,8 @@
-import http.server, os, json
+import http.server, os, json #
 BaseHandler = http.server.BaseHTTPRequestHandler
 
-magacin=[]
+blogs = [] 
+
 class Handler(BaseHandler):
     def _set_headers(self, type):
         self.send_response(200)
@@ -9,9 +10,9 @@ class Handler(BaseHandler):
         self.end_headers()
     def do_GET(self):
         filename = self.path.split("/")[-1]
-        if filename == "" : filename = "AleksaKomazec.html"
+        if filename == "" : filename = "index.html"
         if os.access(filename, os.R_OK) and not os.path.isdir(filename):
-            ext = filename.split(".")[-1]
+            ext = filename.split(".")[-1]                       # Klijent zahteva fajl
             mode = "r"
             if ext in ["html","htm"]: content_type = "text/html"
             elif ext in ["txt","js","py","php"]: content_type = "text/plain"
@@ -23,41 +24,26 @@ class Handler(BaseHandler):
             if mode == "r": content = str.encode(content)
             self._set_headers(content_type)
             self.wfile.write(content)
-        else:
+        else:                                 # Ajax zahtev
             odgovor = {"metod":"GET", "path": self.path, "sadrzaj": ""}
             self._set_headers("text/json")
             self.wfile.write(str.encode(str(odgovor)))
     def do_POST(self):
-         putanja = self.path
-         metod = self.command
-         if putanja=='/magacin':
+        putanja = self.path
+        metod = self.command
+        if putanja == "/dodaj-blog":
             duzina_sadrzaja = int(self.headers['Content-Length'])
             sadrzaj = self.rfile.read(duzina_sadrzaja).decode("utf-8")
-            proizvod=json.loads(sadrzaj)
-            magacin.append(proizvod)
-            print(magacin)
-            odgovor = {"metod":metod, "putanja":putanja , "sadrzaj": sadrzaj}
+            blog = json.loads(sadrzaj)
+            blogs.append(blog)
             self._set_headers("text/json")
-            self.wfile.write(str.encode(json.dumps(odgovor)))
-         if putanja =='/ucitaj_zadatke':
-            sadrzaj = self.rfile.read(duzina_sadrzaja).decode("utf-8")
-            print(magacin)
-            odgovor = magacin
-            self._set_headers("application/json")
-            self.wfile.write(str.encode(json.dumps(odgovor)))
-         if putanja == '/brisanje':
-            duzina_sadrzaja = int(self.headers['Content-Length'])
-            sadrzaj = self.rfile.read(duzina_sadrzaja).decode("utf-8")
-            for i in range(len(magacin)): 
-                if magacin[i] == sadrzaj:
-                     del magacin[i]
-                     break
-            self._set_headers("text/json") 
-            text = "Uspesno obrisano"
-            self.wfile.write(str.encode(text)) 
+            self.wfile.write(str.encode(json.dumps(blogs)))
+        if putanja == "/view-blogs":
+            self._set_headers("text/json")
+            self.wfile.write(str.encode(json.dumps(blogs)))
 try:
-    httpd = http.server.HTTPServer(('',1111), Handler)
-    print("Server startovan...port: 1111")
+    httpd = http.server.HTTPServer(('',8888), Handler)
+    print("Server startovan...port: 8888")
     httpd.serve_forever()
 except:
     print("Server stopiran")
