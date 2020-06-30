@@ -1,4 +1,6 @@
-import http.server, os, json #
+import http.server,
+import os 
+import json #
 BaseHandler = http.server.BaseHTTPRequestHandler
 
 blogs = [] 
