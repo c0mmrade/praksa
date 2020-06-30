@@ -1,8 +1,8 @@
-import http.server, os, json
+import http.server
+import os
+import json
 BaseHandler = http.server.BaseHTTPRequestHandler
-
 odgovor = [] 
-
 class Handler(BaseHandler):
     def _set_headers(self, type):
         self.send_response(200)
