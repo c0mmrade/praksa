@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <link rel="stylesheet" type="text/css" href="klik.css">
+<body>
+<input type="button" id="Button" onclick="Timer()"/>
+<script>
+var brojac= 0;
+
+
+function Timer()
+{
+  if ( document.getElementById("Button").value == "Klikni!" )
+  {
+    
+    document.getElementById("Button").value = "Klikni nakon 5 sec  ponovo!";
+    brojac= setTimeout ( "showAlert()", 5000 );
+  }
+  else
+  {
+    document.getElementById("Button").value = "Klikni!";
+    clearTimeout (brojac);
+  }
+}
+
+function showAlert ()
+{
+  alert ("Zakasnili ste!Niste kliknuli na vreme");
+  document.getElementById("Button").value = "Klikni";
+}
+
+</script>
+</body>
+</html>

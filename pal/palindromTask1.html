@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="pal.css">
+<body>
+<input type="text" id="text"></input>
+<input type="button" id="button" value="Pritisni" onclick="palindrom()"></input>
+<div id="demo"></div>
+<script>
+
+function palindrom()
+{
+var palindrom=document.getElementById("text").value;
+var resenje=palindrom.split(",").reverse().join("");
+if(palindrom==resenje){
+document.getElementById("demo").innerHTML=palindrom + " " +" je palindrom ";
+}
+else{
+document.getElementById("demo").innerHTML= palindrom + " " + "nije palindrom";
+}
+
+}
+
+</script>
+</body>
+</html>
