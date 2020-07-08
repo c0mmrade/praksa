@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Test</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+	#demo{
+		width:250px;
+		height:250px;
+		border:1px dashed gray;
+	}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(function(){
+$("#button").click(function(){
+	var txt=$("#text").val();
+$("#text").val("");
+var prevState=$("#demo").html();
+
+$("#demo").html(prevState+"<br>"+txt);
+
+
+});
+
+});
+
+</script>
+
+<input id="text" type="text"/>
+
+<button id="button">Prikazi</button>
+
+<div id="demo"></div>
+
+</body>
+</html>

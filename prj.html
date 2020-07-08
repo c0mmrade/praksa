@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Test</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+
+	$(function(){
+
+    $("#special").css("font-size","35px");
+    $("#special").css("color","red");
+
+
+    $("#special").click(function(){
+
+      $("button:not(#special)").hide();
+      $(this).css("font-size","12px");
+      $(this).css("color","black");
+      
+	});
+});
+
+</script>
+
+<button id="special" class="bold small">Button 1</button>
+<button class="bold small">Button 2</button>
+<button class="bold">Button 3</button>
+
+
+<button>Button 4</button>
+<button>Button 5</button>
+<button>Button 6</button>
+
+
+</body>
+</html>
+
