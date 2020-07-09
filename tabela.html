@@ -31,12 +31,7 @@ $(document).ready(function(){
   $.getJSON("https://jsonplaceholder.typicode.com/posts", function(data){
     var unos = '';
     $.each(data, function(key, value){
-      unos += '<tr>';
-      unos += '<td>'+value.userId+'</td>';
-      unos += '<td>'+value.id+'</td>';
-      unos += '<td>'+value.title+'</td>';
-      unos += '<td>'+value.body+'</td>';
-      unos += '</tr>';
+      unos +='<tr><td>'+value.userId+'</td><td>'+value.id+'</td><td>'+value.title+'</td><td>'+value.body+'</tr>';
     });
     $('#tb').append(unos);
   });
