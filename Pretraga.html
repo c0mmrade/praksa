@@ -14,7 +14,7 @@ table, td, th {
 </head>
 <body>
 <input type="text" id="myInput"  placeholder="Upisi broj.." >
-<input type="button" id="button" value="Pretrazi" onclick="Pretraga()">
+<input type="button" id="button" value="pretrazi" onclick="pretraga()">
 <div>
         <br/>
         <table id="tb">
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 </script>
 <script>
-function Pretraga() {
+function pretraga() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
