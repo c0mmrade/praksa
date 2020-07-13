@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+}
+table, td, th {
+  border: 1px solid black;
+}
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<input type="text" id="myInput"  placeholder="Upisi broj.." >
+<input type="button" id="button" value="Pretrazi" onclick="Pretraga()">
+<div>
+        <br/>
+        <table id="tb">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>street</th>
+            <th>suite</th>
+            <th>city</th>
+            <th>zipcode</th>
+            <th>lat</th>
+            <th>lng</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>name</th>
+            <th>catchPhrase</th>
+            <th>bs</th>
+          </tr>
+        </table>   
+</div>  
+</body>
+</html>
+<script>
+
+$(document).ready(function(){
+  $.getJSON("https://jsonplaceholder.typicode.com/users", function(data){
+    var unos =''; 
+    $.each(data, function(key, value){
+    unos +='<tr>';
+    unos +='<td>'+value.id+'</td><td>'+value.name+'</td><td>'+value.username+'</td><td>'+value.email+'</td>';
+    unos +='<td>'+value.address.street+'</td><td>'+value.address.suite+'</td><td>'+value.address.city+'</td><td>'+value.address.zipcode +'</td>';
+    unos +='<td>'+value.address.geo.lat+'</td><td>'+value.address.geo.lng +'</td>';
+    unos +='<td>'+value.phone+'</td><td>'+value.website +'</td>';
+    unos +='<td>'+value.company.name +'</td><td>'+ value.company.catchPhrase +'</td><td>'+ value.company.bs +'</td>';
+    unos +='</tr>';
+    });
+    $('#tb').append(unos);
+  });
+});
+
+</script>
+<script>
+function Pretraga() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tb");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
