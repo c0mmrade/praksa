@@ -5,8 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    />
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
       .kk {
@@ -18,13 +17,11 @@
     </style>
   </head>
   <body>
-    <div id="demo" class="container m-2">
+    <div id="demo">
       <button id="load_photos" class="btn btn-default">Ucitaj</button><br />
       <div class="row">
         <div
-          class="col-xs-12 levo"
-          style="margin-bottom: 100px !important;"
-        ></div>
+          class="col-xs-12 levo></div>
         <div class="col-xs-12 desno"></div>
       </div>
     </div>
@@ -48,7 +45,6 @@
               }
             });
         });
-
         function displayImage(tb) {
           $(".levo").append(`<img src='${tb}' class="kk" />`);
         }
