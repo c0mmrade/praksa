@@ -35,7 +35,7 @@
             })
             .then(function (data) {
               for (var i = 0; i < 10; i++) {
-                var num = Math.floor((Math.random() * 5000)+1);
+                var num = Math.floor(Math.random() * 5000);
                 if (i >= 5) {
                   displayImage(data[num].url);
                 } else {
