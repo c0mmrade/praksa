@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+
+	 background-color: LightGray;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Lucida Console", Courier, monospace;
+}
+input[type=button] {
+  width: 50%;
+  background-color: pink;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: center;
+  font-family: "Lucida Console", Courier;
+  border: 2px solid #008CBA
+}
+#demo
+{
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+</style>
+</head>
+<body>
+<input type="text" placeholder="unesite reci" id="text"/>
+<br>
+<input type="button" id="button" value="prikazi" onclick="duzina()"></input>
+<div id="demo"></div>
+
+<div id="div1" class="fa"></div>
+
+<script>
+	function duzina(){
+		var unos =document.getElementById("text").value;
+        var niz=unos.split(',');
+		var max_str = niz[0].length;
+        var rezultat = niz[0];
+    for (var i = 1; i < niz.length; i++) {
+        var maxi = niz[i].length;
+        if (maxi > max_str) {
+            rezultat = niz[i];
+            max_str = maxi;
+        }
+    }
+    document.getElementById("demo").innerHTML="Vasa najduza rec je:" + rezultat;
+}
+
+</script>
+</body>
+</html>
+ 
