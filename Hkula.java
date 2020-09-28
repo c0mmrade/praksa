@@ -3,7 +3,6 @@
 //Wikipedija -Samo jedan disk moze da se pomeri istovremeno
 //Svaki potez se sastoji od uzimanja gornjeg diska sa jedne gomile i stavljanjem tog istom na vrh druge gomile
 //Nijedan disk ne sme biti smesten na manji disk na stapu
-
 package jovana;
 	import java.util.Scanner; 
 	//klasa Scanner iz java.util paketa 
