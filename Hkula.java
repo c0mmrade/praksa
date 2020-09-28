@@ -8,9 +8,9 @@ package jovana;
 	import java.util.Scanner; 
 	//klasa Scanner iz java.util paketa 
 	public class Hkula{
-		//prvi,drugi,treci odnosi se na stapove
-		public static void hanojiKula(int brojDiskova, String prvi,String drugi,String treci) {
-			//Zadatak je bio da moze da se upise od 1 do 10 diskova
+			//prvi,drugi,treci odnosi se na stapove
+			public static void hanojiKula(int brojDiskova, String prvi,String drugi,String treci) {
+			//Zadatak zahteva da moze da se upise od 1 do 10 diskova
 			if(brojDiskova<1 || brojDiskova>10) {
 				System.out.println("Broj diskova ne moze biti manji od 1 ili veci od 10");
 				return;
