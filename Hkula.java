@@ -16,13 +16,13 @@ package jovana;
 				//Odnosi se na manji disk koji je na vrhu
 			}  if(brojDiskova==1) {
 				
-				System.out.println("Staviti disk 1 sa " + prvi + " " +"na"+ " "+ treci);
+				System.out.println("Staviti disk 1 sa " + prvi + " " +"na"+ " "+ drugi);
 				return;
 			}
 			//Oduzimanje gornjeg diska
-			hanojiKula(brojDiskova-1,prvi,drugi,treci);
-			System.out.println("Staviti disk " + brojDiskova + " "+ "sa" + " " + prvi + " "+"na" + " "+treci);
-			hanojiKula(brojDiskova-1,drugi,prvi,treci);
+			hanojiKula(brojDiskova-1,prvi,treci,drugi);
+			System.out.println("Staviti disk " + brojDiskova + " "+ "sa" + " " + prvi + " "+"na" + " "+drugi);
+			hanojiKula(brojDiskova-1,treci,drugi,prvi);
 				
 			}
 			public  static void main(String[]args) {
